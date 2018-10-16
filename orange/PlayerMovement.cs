@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody rb;
 
     // create a variable that will hold the amount of force being applied
-    public float forceApplied = 40f;
+    public float forceApplied = 500f;
 
     public float forwardForce = 1000f;
 
