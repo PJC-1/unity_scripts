@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody rb;
 
     // create a variable that will hold the amount of force being applied
-    public float forceApplied = 500f;
+    public float forceApplied = 100f;
 
     public float forwardForce = 1000f;
 
@@ -16,11 +16,11 @@ public class PlayerMovement : MonoBehaviour {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         if(Input.GetKey("d")){
-            rb.AddForce(forceApplied * Time.deltaTime, 0, 0);
+            rb.AddForce(forceApplied * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if(Input.GetKey("a")){
-            rb.AddForce( -forceApplied * Time.deltaTime, 0, 0);
+            rb.AddForce( -forceApplied * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
