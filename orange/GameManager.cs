@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// access scene manager
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour {
 
     bool gameHasEnded = false;
@@ -8,6 +11,11 @@ public class GameManager : MonoBehaviour {
         if(gameHasEnded == false){
             gameHasEnded = true;
             Debug.Log ("Game Over");
+            Invoke("Restart", 1f);
         }
+    }
+
+    void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
