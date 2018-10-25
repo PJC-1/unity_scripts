@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class RestartLevel : MonoBehaviour {
 
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 		// get input from the user
         if(Input.GetKey("r")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

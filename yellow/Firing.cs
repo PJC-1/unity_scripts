@@ -12,7 +12,7 @@ public class Firing : MonoBehaviour {
   public float forwardForce = 2000f;
 
 	// Update is called once per physics update
-	void FixedUpdate () {
+	void FixedUpdate() {
 		// fire the ball with a key press
         if(Input.GetKey("space")){
             // move the ball forward

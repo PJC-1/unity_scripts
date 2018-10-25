@@ -10,7 +10,7 @@ public class Score : MonoBehaviour {
 
 
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 		// update the score text with the z position of the player
         scoreText.text = player.position.z.ToString("0");
 	}
