@@ -7,6 +7,13 @@ Rigidbody
 To ensure that the object (*i.e. player*) will not roll, you can *lock the rotation of the player* by selecting the ```x, y, z``` check-boxes for **Freeze Rotation** under the **Constraints** section in the object's *inspector*.
 
 
+Prefabs
+-------------
+A [prefab](https://docs.unity3d.com/Manual/Prefabs.html) is a copy of a *game object* converted into a reusable asset -- it shows up in the Project folder and is serialized as a file on disk. Prefabs can contain a hierarchy of game objects.
+
+From the **Inspector** tab, you need to click ```Apply``` to save any changes made to the *prefab*.
+
+
 Asset Store
 -------------
 The [Asset Store](https://assetstore.unity.com) is where you can find:
