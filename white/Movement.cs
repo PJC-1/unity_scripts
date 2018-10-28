@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour {
     // "void" is used when the function does not return anything
     void FixedUpdate() {
       //Get input from the user
-      if(Input.GetKey("w")){
+      if(Input.GetKey("w")) {
         //Apply force to rigidbody
         rb.AddForce(0,0, forceApplied * Time.deltaTime);
       }

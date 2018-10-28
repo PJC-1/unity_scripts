@@ -15,16 +15,16 @@ public class PlayerMovement : MonoBehaviour {
         // move forward
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
-        if(Input.GetKey("d")){
+        if(Input.GetKey("d")) {
             rb.AddForce(forceApplied * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        if(Input.GetKey("a")){
+        if(Input.GetKey("a")) {
             rb.AddForce( -forceApplied * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        if(rb.position.y < -1f){
-            FindObjectOfType<GameManager> ().EndGame ();
+        if(rb.position.y < -1f) {
+            FindObjectOfType<GameManager>().EndGame ();
         }
     }
 }

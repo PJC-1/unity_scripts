@@ -14,7 +14,7 @@ public class Firing : MonoBehaviour {
 	// Update is called once per physics update
 	void FixedUpdate() {
 		// fire the ball with a key press
-        if(Input.GetKey("space")){
+        if(Input.GetKey("space")) {
             // move the ball forward
             rb.AddForce(0, 0, forwardForce * Time.deltaTime);
         }
