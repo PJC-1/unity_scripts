@@ -1,3 +1,6 @@
+
+
+
 Unity
 ===================
 > Learning about Video Game Development with Unity Engine
@@ -12,6 +15,11 @@ Prefabs
 A [prefab](https://docs.unity3d.com/Manual/Prefabs.html) is a copy of a *game object* converted into a reusable asset -- it shows up in the Project folder and is serialized as a file on disk. Prefabs can contain a hierarchy of game objects.
 
 From the **Inspector** tab, you need to click ```Apply``` to save any changes made to the *prefab*.
+
+
+Movement
+-------------
+To avoid giving an object a boost in movement, you can use the [```normalize```](https://docs.unity3d.com/ScriptReference/Vector3.Normalize.html) method. The *normalize* method will make the vector have a *magnitude* of ```1```.
 
 
 Asset Store
