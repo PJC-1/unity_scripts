@@ -1,6 +1,3 @@
-
-
-
 Unity
 ===================
 > Learning about Video Game Development with Unity Engine
@@ -20,6 +17,15 @@ From the **Inspector** tab, you need to click ```Apply``` to save any changes ma
 Movement
 -------------
 To avoid giving an object a boost in movement, you can use the [```normalize```](https://docs.unity3d.com/ScriptReference/Vector3.Normalize.html) method. The *normalize* method will make the vector have a *magnitude* of ```1```.
+
+
+gameObject vs Game Object
+-------------
+```GameObject``` is a type of object and acts as a base *class* for most Unity entities. It refers to the ```GameObject``` stored by unity which holds all *Component* data related to a ```GameObject``` (such as the ```Transform```), the name and various other things.
+
+```gameObject``` is a local variable of type ```GameObject``` which is inherited from Component. It allows one to access the instance of the ```GameObject``` to which this component is attached.
+
+This is explained here on [https://answers.unity.com](https://answers.unity.com/questions/32419/whats-the-difference-between-gameobject-and-gameob.html)
 
 
 Asset Store
