@@ -1,3 +1,6 @@
+
+
+
 Unity
 ===================
 > Learning about Video Game Development with Unity Engine
@@ -27,6 +30,23 @@ gameObject vs Game Object
 
 This is explained here on [https://answers.unity.com](https://answers.unity.com/questions/32419/whats-the-difference-between-gameobject-and-gameob.html)
 
+
+Audio
+-------------
+Generally, you will want to add *background music* to the ```Main Camera``` since it will always be in the *scene*.
+
+*Unity* will accept the following *audio* files:
+- ```ogg```
+- ```wave```
+- ```mp3```
+
+You  can add *background music* by:
+- using ```Add Component``` on the object.
+- add an ```Audio Source``` component.
+- drag your *audio-clip* into the ```AudioClip``` field.
+- ensure that ```Play On Awake``` is *checked*, it will make the *audio-clip* play as soon as the *scene* loads.
+- also *check* the ```Loop``` option to have audio for the whole scene.
+- adjust the ```Volume``` option to your preference.
 
 Asset Store
 -------------
