@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour {
     void OnTriggerEnter() {
-        Debug.Log("Finish");
-        // grabs the scene we are in and adds 1 to it
+        Debug.Log("Checkpoint reached");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
