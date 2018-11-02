@@ -1,6 +1,3 @@
-
-
-
 Unity
 ===================
 > Learning about Video Game Development with Unity Engine
@@ -58,3 +55,13 @@ The [Asset Store](https://assetstore.unity.com) is where you can find:
 -	Audio
 
 You can need to be logged in. When you use the "Add to My Assets" button to add any *asset* to your saved of assets. Then from Unity you can select the **Asset Store** tab and proceed to the "My Assets", where you can **Import** any of your assets into your project.
+
+
+Raycasting
+-------------
+[Raycasting](https://unity3d.com/learn/tutorials/topics/physics/raycasting) is very important in game *3-D* game development. It allows a user to cast a line from a *gameObject* into the world. Typically it's from the *camera*, or a *gun*, or something your character is holding/aiming.
+It draws a line from that object to into the world, and then we can get some information about what the object just collided with.
+So when you execute ```Physics.Raycast(<STARTING POINT>, <WHAT IT HIT>, <HOW FAR>, <MASK TO MATCH>)``` the first parameter is the ```<STARTING POINT>```, which is a ```Vector3``` that is your *starting point*. That is where the *raycast* is originating from.
+The second parameter will be the *out*, what you hit.
+The third parameter is *how far* the cast will be.
+The last parameter is the what you are trying to match, the *mask* is what you are looking for.
