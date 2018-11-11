@@ -1,3 +1,6 @@
+
+
+
 Unity
 ===================
 > Learning about Video Game Development with Unity Engine
@@ -65,3 +68,11 @@ So when you execute ```Physics.Raycast(<STARTING POINT>, <WHAT IT HIT>, <HOW FAR
 The second parameter will be the *out*, what you hit.
 The third parameter is *how far* the cast will be.
 The last parameter is the what you are trying to match, the *mask* is what you are looking for.
+
+
+Nav Mesh
+-------------
+[Building a NavMesh](https://docs.unity3d.com/Manual/nav-BuildingNavMesh.html)
+The process of creating a **NavMesh** from the level geometry is called Terrains Baking. The process collects the Render Meshes and **Terrains** of all Game Objects which are marked as **Navigation Static**, and then processes them to create navigation *mesh* that approximates the walkable surfaces of the level.
+
+In Unity, NavMesh generation is handled from the Navigation window (menu: ```Window > API > Navigation```).
