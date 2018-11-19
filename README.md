@@ -76,3 +76,18 @@ Nav Mesh
 The process of creating a **NavMesh** from the level geometry is called Terrains Baking. The process collects the Render Meshes and **Terrains** of all Game Objects which are marked as **Navigation Static**, and then processes them to create navigation *mesh* that approximates the walkable surfaces of the level.
 
 In Unity, NavMesh generation is handled from the Navigation window (menu: ```Window > API > Navigation```).
+
+Quaternion
+-------------
+[Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html) are how we do *rotations* in *unity*, they are a system of rotation that allow for smooth incremental rotations in objects.
+
+You *almost* never access or modify individual *Quaternion* components (```x```, ```y```, ```z```, ```w```).
+
+
+Quad
+-------------
+A [Quad](https://docs.unity3d.com/Manual/Example-CreatingaBillboardPlane.html) is a *primitive object* that resembles a plane but its edges are only one unit long, it uses only 4 vertices, and the surface is oriented in the XY plane of the local coordinate space.
+
+Capsule Collider
+-------------
+The [Capsule Collider](https://docs.unity3d.com/Manual/class-CapsuleCollider.html) is made of two half-spheres joined together by a cylinder. It is the same shape as the *Capsule primitive*
