@@ -110,3 +110,9 @@ For **example**, when our scene will only be a single **room** we can set the ``
 ```Projection```: Toggles the *camera's* capability to simulate *perspective.
 - ```Perspective```: Camera will render objects with *perspective* intact.
 - ```Orthographic```: Camera will render objects uniformly, with no sense of *perspective*. **NOTE**: Deferred rendering is not supported in *Orthographic* mode. **Forward rendering** is always used.
+
+Vector3
+-------------
+[Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html ) is the *representation* of **3D vectors** and **points**. This structure is used throughout *Unity* to pass **3D positions** and **directions** around. It also contains functions for doing common vector operations.
+
+```Lerp```: *Linearly* interpolates between two vectors (*creating a smooth transition between two positions*).
