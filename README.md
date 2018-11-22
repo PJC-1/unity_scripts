@@ -91,3 +91,22 @@ A [Quad](https://docs.unity3d.com/Manual/Example-CreatingaBillboardPlane.html) i
 Capsule Collider
 -------------
 The [Capsule Collider](https://docs.unity3d.com/Manual/class-CapsuleCollider.html) is made of two half-spheres joined together by a cylinder. It is the same shape as the *Capsule primitive*
+
+Animator Controller
+-------------
+An [Animator Controller](https://docs.unity3d.com/Manual/class-AnimatorController.html) allows you to arrange and maintain a set of *Animation Clips* and associated *Animation Transitions* for a character or object.
+
+The *Animator Controller* has references to the Animation clips used within it, and manages the various Animation Clips and the Transitions between them using a *State Machine*, which could be thought of as a flow-chart of Animation Clips and Transitions, or a simple program written in a visual programming language within *Unity*.
+
+
+Camera
+-------------
+[Cameras](https://docs.unity3d.com/Manual/class-Camera.html) are the devices that capture and display the world to the player. By customizing and manipulating cameras, you can make the presentation of your game truly unique. You can have an *unlimited* number of cameras in a ```scene```. They can be set to render in any order, at any place on the screen, or only certain parts of the screen.
+
+```Clear Flags```: Determines which parts of the screen will be cleared. This is handy when using multiple *Cameras* to draw different game elements.
+
+For **example**, when our scene will only be a single **room** we can set the ```Clear Flags``` *camera property* to ```Solid Color```, which will change the *background* to a *solid color*, just in case the **camera** veers off of the **scene** it *won't* look out of place.
+
+```Projection```: Toggles the *camera's* capability to simulate *perspective.
+- ```Perspective```: Camera will render objects with *perspective* intact.
+- ```Orthographic```: Camera will render objects uniformly, with no sense of *perspective*. **NOTE**: Deferred rendering is not supported in *Orthographic* mode. **Forward rendering** is always used.

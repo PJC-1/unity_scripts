@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour {
     // reference the Animator Controller
     private Animator anim;
 
-    private Vector3 movement; // store the movement we want to apply to the player
-    private Rigidbody playerRigidbody; // reference to the players rigidbody
+    // store the movement we want to apply to the player
+    private Vector3 movement;
+
+    // reference to the players rigidbody
+    private Rigidbody playerRigidbody;
 
     // execute when the scene loads
     void Awake() {
@@ -47,7 +50,8 @@ public class PlayerMovement : MonoBehaviour {
     void Animating(float h, float v) {
         // set walking to true if h or v is not 0
         bool walking = h != 0f || v != 0f;
-        // set the AC condition of IsWalking to true or false
+
+        // set the Animator Controller condition of IsWalking to true or false
         anim.SetBool("IsWalking", walking);
     }
 }
