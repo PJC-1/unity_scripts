@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour {
     // reference to the players rigidbody
     private Rigidbody playerRigidbody;
 
+    // used to lock camera to the player
+    private int floorMask;
+
+    private float camRayLength = 100f;
+
     // execute when the scene loads
     void Awake() {
         // set the player rigid body variable to the player's rigidbody
@@ -20,6 +25,8 @@ public class PlayerMovement : MonoBehaviour {
 
         // sets animation to be the Animator Controller on the player
         anim = GetComponent<Animator>();
+
+        floorMask = LayerMask.GetMask("Floor");
     }
 
     // fires every physics update
@@ -36,14 +43,24 @@ public class PlayerMovement : MonoBehaviour {
     void Move(float h, float v) {
         // set the movement vector
         movement.Set(h, 0f, v);
-        //normalize the vectors so no speed boost is given
+        // normalize the vectors so no speed boost is given
         movement = movement.normalized * speed * Time.deltaTime;
         playerRigidbody.MovePosition(transform.position + movement);
     }
 
     // create a turn function
     void Turning() {
+        // returns a ray going from camera through a screen point.
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit floorHit;
 
+        if(Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
+            Vector3 playerToMouse = floorHit.point - transform.position;
+            playerToMouse.y = 0f;
+
+            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+            playerRigidbody.MoveRotation(newRotation);
+        }
     }
 
     // create an animate function
