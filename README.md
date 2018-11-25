@@ -111,6 +111,24 @@ For **example**, when our scene will only be a single **room** we can set the ``
 - ```Perspective```: Camera will render objects with *perspective* intact.
 - ```Orthographic```: Camera will render objects uniformly, with no sense of *perspective*. **NOTE**: Deferred rendering is not supported in *Orthographic* mode. **Forward rendering** is always used.
 
+**ERROR**:
+The following line of code in my ```Turning()``` method from the ```PlayerMovement.cs``` script was *erroring out* during testing.
+```
+Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+```
+```
+NullReferenceException: Object reference not set to an instance of an object
+
+PlayerMovement.Turning () (at Assets/Scripts/Player/PlayerMovement.cs:54)
+
+PlayerMovement.FixedUpdate () (at Assets/Scripts/Player/PlayerMovement.cs:38)
+```
+**Root Cause**:
+The *issue* was that the camera needed to be set with the *tag* ```MainCamera```.
+*NOTE*: If you have more **cameras** they do **NOT** come with the ```MainCamera``` *tag* by *default*.
+More information on [Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html) in the documentation.
+
+
 Vector3
 -------------
 [Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html ) is the *representation* of **3D vectors** and **points**. This structure is used throughout *Unity* to pass **3D positions** and **directions** around. It also contains functions for doing common vector operations.
